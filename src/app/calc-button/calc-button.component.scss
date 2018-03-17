@@ -1,0 +1,24 @@
+.button-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  button {
+    width: 22%;
+    height: 3rem;
+    margin: 0.5rem 0;
+    border: 3px solid white;
+    background-color: #123;
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 2rem;
+    &:hover {
+      background-color: #567;
+    }
+    &:active {
+      background-color: #789;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
