@@ -8,6 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   public value = '0';
 
+  handleButtonPressed(data) {
+    this.value = data;
+    console.log(this.value);
+  }
+
   private setValue(bClk) {
     this.value += bClk;
   }
