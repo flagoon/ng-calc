@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
+import { EventEmitter } from 'events';
 
 @Component({
   selector: 'app-calc-button',
@@ -6,10 +7,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calc-button.component.scss']
 })
 export class CalcButtonComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  @Output() pressButton = new EventEmitter();
 
-  ngOnInit() {
+  public buttonPressed: string;
+
+  ngOnInit() {}
+
+  calcAndMore(sign) {
+    this.buttonPressed = sign;
+    this.pressButton.emit(this.buttonPressed);
+    console.log(this.buttonPressed);
   }
 
+  addNumber(num) {
+    this.buttonPressed = num;
+    this.pressButton.emit(this.buttonPressed);
+    console.log(this.buttonPressed);
+  }
+
+  dotHandler() {
+    this.buttonPressed = '.';
+    this.pressButton.emit(this.buttonPressed);
+    console.log(this.buttonPressed);
+  }
 }

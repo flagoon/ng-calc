@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-screen',
@@ -7,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScreenComponent implements OnInit {
   constructor() {}
-  public screenValue: number;
+  @Input() value: string;
+  public screenValue: string;
   ngOnInit() {
-    this.screenValue = 0;
+    this.screenValue = this.value;
   }
 }
