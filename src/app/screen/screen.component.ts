@@ -7,9 +7,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ScreenComponent implements OnInit {
   constructor() {}
+
   @Input() value: string;
-  public screenValue: string;
+
   ngOnInit() {
-    this.screenValue = this.value;
   }
 }
