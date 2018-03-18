@@ -20,7 +20,7 @@ export class CalcButtonComponent implements OnInit {
     this.pressButton.emit(num);
   }
 
-  dotHandler() {
-    this.pressButton.emit('.');
+  ceHandler() {
+    this.pressButton.emit('ce');
   }
 }

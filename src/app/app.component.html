@@ -1,6 +1,8 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
 <div class="calc-body">
-  <app-screen></app-screen>
-  <app-calc-button (pressButton)="handleButtonPressed($data)"></app-calc-button>
+  <app-screen value="{{value}}"></app-screen>
+  <app-calc-button (pressButton)="handleButtonPressed($event)"></app-calc-button>
 </div>
+
+<div>Test: {{value}}</div>
